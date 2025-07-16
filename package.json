@@ -1,0 +1,33 @@
+{
+  "name": "email-parser",
+  "displayName": "Email CSS/HTML Parser",
+  "description": "Enhanced CSS and HTML parsing for email development",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Programming Languages"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "email.injection",
+        "path": "./syntaxes/email-injection.tmLanguage.json",
+        "injectTo": ["source.css", "source.css.embedded.html"]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "vscode-css-languageservice": "^6.2.10"
+  }
+}

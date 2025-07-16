@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Email CSS Injection",
+  "injectionSelector": "L:source.css",
+  "patterns": [
+    {
+      "match": "(\\.&)\\s+([.#]?[a-zA-Z_-][a-zA-Z0-9_-]*)",
+      "captures": {
+        "1": {
+          "name": "entity.name.tag.css.selector"
+        },
+        "2": {
+          "name": "entity.name.tag.css.selector"
+        }
+      }
+    }
+  ],
+  "scopeName": "email.injection"
+}
